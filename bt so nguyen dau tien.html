@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tìm Số Nguyên Tố</title>
+</head>
+<body>
+<h3> số nguyên tố</h3>
+<script>
+    let number = parseInt(prompt("nhập:"));
+    let count = 0;
+    for (let i = 2; count < number; i++) {
+        if (checkSNT(i)) {
+            document.write(i + " là số nguyên số" + "<br>");
+            count++;
+        }
+    }
+    function checkSNT(snt) {
+        let a = true;
+        if (snt > 2) {
+            for (let i = 2; i < snt; i++) {
+                if (snt % i === 0) {
+                    a = false;
+                }
+            }
+        }
+        return a;
+    }
+</script>
+</body>
+</html>
